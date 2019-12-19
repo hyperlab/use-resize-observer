@@ -64,7 +64,7 @@ export default function({
     resizeObserver.observe(element);
 
     return () => resizeObserver.unobserve(element);
-  }, [ref]);
+  }, [ref, ref.current]);
 
   return useMemo(() => ({ ref, ...size }), [
     ref,
